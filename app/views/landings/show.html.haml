@@ -1,0 +1,159 @@
+.container
+  .row
+    .feature.col-xs-12
+      %h2.motto
+        Feel freedom with
+        = succeed "." do
+          %strong RepoFS
+      %h3.subheader
+        Independent &middot; Private &middot; Unlimited
+      = image_tag 'window.png', class: 'img-responsive', id: 'feature-screenshot'
+  .row
+    .col-xs-12.graded.center
+      %p
+        We offer you a private and independent repository server with the unlimited number of repositories, users
+        %br
+        and work spaces managed by the powerful CLI or the Web interface.
+#features.container
+  .row
+    .col-xs-12
+      %h2 Features
+  .row
+    .col-xs-12
+      .box.drop-shadow
+        .row
+          .col-sm-4.col-sm-push-7
+            = image_tag 'repositories.png', class: 'img-responsive image-right'
+          %article.col-sm-6.col-sm-offset-1.col-sm-pull-4
+            %h3 Manage repositories
+            %p
+              You have unlimited access to the repositories and work spaces. Put your private projects into the safe place
+              easily.
+        .row
+          .col-sm-5.col-sm-offset-1
+            = image_tag 'custom_domains.png', class: 'img-responsive'
+          %article.col-sm-5
+            %h3 Custom domains
+            %p
+              Depending on the plan, you can add as many custom domains as you want. The domain can be your brand name
+              or point to the existing static page.
+        .row
+          .col-sm-4.col-sm-push-7
+            = image_tag 'statics.png', class: 'img-responsive image-right'
+          %article.col-sm-6.col-sm-offset-1.col-sm-pull-4
+            %h3 Static pages
+            %p
+              Generate static pages with RepoFS easily with Jekyll. Just push your Jekyll templates and add .repofs
+              file into the main dir. RepoFS will do the rest.
+        .row
+          .col-sm-5.col-sm-offset-1
+            = image_tag 'developers.png', class: 'img-responsive image-left'
+          %article.col-sm-5
+            %h3 Users
+            %p
+              You have possibility to create unlimited number of developers and manage authorized keys.
+              You can allow or disallow the developer's access to the repository. All the admins have
+              full access to the repository list. Each developer can upload unlimited number of authorized keys as
+              easy as `repofs upload key.pub`.
+        .row
+          .col-sm-4.col-sm-push-7
+            = image_tag 'repofs-gui.png', class: 'img-responsive image-right'
+          %article.col-sm-6.col-sm-offset-1.col-sm-pull-4
+            %h3 Full Web Interface (soon)
+            %p
+              We still improve RepoFS. The Full Web Interface will be ready soon. The set of new features includes
+              code reviews &middot; browsing and comparing commits &middot; comments and discussions &middot;
+              pull requests &middot; branches, tags and issues.
+
+#pricing.container
+  .row
+    .col-xs-12
+      %h2
+        Plans and pricing
+      %h3.subheader
+        Each plan contains a dedicated IP, one subdomain and the backups.
+
+  .row.pricing
+    .col-sm-3
+      .well
+        %h3 Micro
+        %ul
+          %li Unlimited users
+          %li Unlimited repositories
+          %li Unlimited work spaces
+          %li N/A pages
+          %li N/A custom domains
+          %li 5GB storage
+        %h4 $10/month
+    .col-sm-3
+      .well
+        %h3 Small
+        %ul
+          %li Unlimited users
+          %li Unlimited repositories
+          %li Unlimited work spaces
+          %li N/A pages
+          %li N/A custom domains
+          %li 10GB storage
+        %h4 $20/month
+    .col-sm-3
+      .spot
+        Best
+        %br>/
+        value!
+      .well.highlighted
+        %h3 Medium
+        %ul
+          %li Unlimited users
+          %li Unlimited repositories
+          %li Unlimited work spaces
+          %li Unlimited pages
+          %li Unlimited custom domains
+          %li 20GB storage
+        %h4 $30/month
+    .col-sm-3
+      .well
+        %h3 Large
+        %ul
+          %li Unlimited users
+          %li Unlimited repositories
+          %li Unlimited work spaces
+          %li Unlimited pages
+          %li Unlimited custom domains
+          %li 40GB storage
+        %h4 $50/month
+  .row
+    .col-xs-4.center
+      %small Additional storage costs $2/1GB/month
+  .row
+    .col-xs-12.center.graded
+      %a.signup{:href => "#"} Sign up now
+  %h2 Upgrades and maintenance
+  .row
+    .col-xs-12
+      .box
+        .row
+          %article.col-sm-10.col-sm-offset-1
+            %p
+              Our main purpose is to offer the best quality and the most flexible tool for the teams and freelancers
+              in a good price. We improve our system every day. Upgrades and maintenance is free of charge.
+              You have got the most recent and stable version.
+%footer.container
+  .row
+    .col-xs-12
+      %h3.subheader Keep in touch.
+  .row
+    .col-sm-8
+      %h4 About us
+      %p
+        RepoFS was founded in 2015 by Lukasz Sliwa and Apptamers Ltd. to give developers and their companies
+        a private, unlimited, independent and powerful repository server. By developers, for developers.
+      %p
+    .col-sm-4
+      %form.form-inline
+        %h4 Sign up to the newsletter
+        .input-group
+          %span.input-group-addon
+            %i.glyphicon.glyphicon-envelope
+          %input#inputEmail.form-control{:placeholder => "Email address", :type => "text"}/
+        %button.signup.small Sign up

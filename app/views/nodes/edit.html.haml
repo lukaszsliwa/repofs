@@ -1,0 +1,10 @@
+= content_for :title do
+  Nodes &middot; Edit
+
+.container
+  .row
+    = form_for @node, as: :node, url: node_path(@node), html: { class: 'margin-center' } do |f|
+      = render partial: 'nodes/form', locals: { f: f }
+      = f.submit 'Update', class: 'btn btn-success btn-grad btn-round'
+      or
+      = link_to 'Cancel', nodes_path

@@ -2,7 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 
+gem 'devise', '~> 3.5.1'
+gem 'kaminari'
+
+gem 'settingslogic'
+
 gem 'haml', '4.0.6'
+gem 'font-awesome-rails'
 gem 'sqlite3'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails', '~> 5.0'

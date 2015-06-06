@@ -1,0 +1,16 @@
+.container
+  .row
+    %h3 Log in
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form margin-center'}) do |f|
+      .form-group
+        = f.label :email, 'E-mail'
+        = f.email_field :email, autofocus: true, class: 'form-control input-lg'
+      .form-group
+        = f.label :password
+        = f.password_field :password, autocomplete: "off", class: 'form-control input-lg'
+      - if devise_mapping.rememberable?
+        .form-group
+          = f.check_box :remember_me
+          = f.label :remember_me
+      .actions
+        = f.submit "Log in", class: 'btn btn-lg btn-success btn-round btn-grad'

@@ -127,7 +127,7 @@
       %small Additional storage costs $2/1GB/month
   .row
     .col-xs-12.center.graded
-      %a.signup{:href => "#"} Sign up now
+      = link_to 'Sign up now', new_user_registration_path, class: 'signup'
   %h2 Upgrades and maintenance
   .row
     .col-xs-12
@@ -150,10 +150,11 @@
         a private, unlimited, independent and powerful repository server. By developers, for developers.
       %p
     .col-sm-4
-      %form.form-inline
+      = form_for Newsletter.new, as: :newsletter, url: newsletter_path, html: {class: 'form-inline', remote: true} do |f|
         %h4 Sign up to the newsletter
-        .input-group
-          %span.input-group-addon
-            %i.glyphicon.glyphicon-envelope
-          %input#inputEmail.form-control{:placeholder => "Email address", :type => "text"}/
-        %button.signup.small Sign up
+        .col-xs-9
+          .input-group
+            %span.input-group-addon
+              %i.glyphicon.glyphicon-envelope
+            = f.email_field :email, class: 'form-control', id: 'inputEmail', placeholder: 'E-mail address'
+        = f.submit 'Sign up', class: 'signup small'

@@ -1,0 +1,12 @@
+defaults: &defaults
+  node:
+    domain: '%{subdomain}.reponode.com'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

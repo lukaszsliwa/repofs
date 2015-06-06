@@ -16,6 +16,8 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap/theme";
+@import "font-awesome";
 
 body {
     background: #fff;
@@ -42,7 +44,12 @@ a:link, a:visited {
 a:hover {
     color:#3799ca;
     text-decoration:underline;
+}
 
+.btn-default {
+    color: #444 !important;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 h2 {
@@ -153,7 +160,6 @@ nav .navbar-brand {
     background:#fff;
     border:1px solid #ddd;
     border-color:#ddd #d0d0d0 #bbb;
-    line-height:16px;
     text-align:center;
     min-width:60px;
 }
@@ -570,4 +576,48 @@ footer form .signup {
     }
 
 
+}
+
+#error_explanation {
+    h2 { display: none }
+}
+
+#new_user {
+    margin-top: 50px;
+    width: 350px;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+/* buttons */
+
+.btn-round {
+    border-radius: 26px !important;
+}
+
+.btn-success {
+    &.btn-grad {
+        background: #86bd53;
+        background-image: -webkit-linear-gradient(top, #86bd53, #56a640);
+        background-image: -moz-linear-gradient(top, #86bd53, #56a640);
+        background-image: -ms-linear-gradient(top, #86bd53, #56a640);
+        background-image: -o-linear-gradient(top, #86bd53, #56a640);
+        background-image: linear-gradient(to bottom, #86bd53, #56a640);
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        padding: 8px 14px;
+        text-decoration: none;
+        color: #fff;
+        font-family: "Open Sans",sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+
+        &:hover {
+            background: #4d9615 !important;
+            text-decoration: none;
+        }
+    }
 }

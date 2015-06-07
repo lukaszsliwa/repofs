@@ -1,0 +1,15 @@
+#menu-nodes-container.container
+  .row
+    = link_to 'Dashboard', node_path(@node), class: 'btn btn-default btn-grad btn-round nodes'
+    = link_to 'Repositories', node_repositories_path(@node), class: 'btn btn-default btn-grad btn-round nodes-repositories'
+    = link_to 'Work spaces',  node_spaces_path(@node), class: 'btn btn-default btn-grad btn-round nodes-spaces'
+    = link_to 'Developers', node_developers_path(@node), class: 'btn btn-default btn-grad btn-round nodes-developers'
+    = link_to 'Keys', node_keys_path(@node), class: 'btn btn-default btn-grad btn-round nodes-keys'
+    = link_to 'Domains', node_domains_path(@node), class: 'btn btn-default btn-grad btn-round nodes-domains'
+    = link_to 'Hooks', node_hooks_path(@node), class: 'btn btn-default btn-grad btn-round nodes-hooks'
+    = link_to 'Apps', node_apps_path(@node), class: 'btn btn-default btn-grad btn-round nodes-apps'
+
+:javascript
+  $(function() {
+    $('#menu-nodes-container a.#{params[:controller].parameterize}').addClass('active');
+  });

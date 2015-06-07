@@ -1,6 +1,6 @@
 class NodesController < ApplicationController
   def index
-    @nodes = Node.page params[:page]
+    @nodes = current_user.nodes.page params[:page]
   end
 
   def new
@@ -9,6 +9,7 @@ class NodesController < ApplicationController
 
   def create
     @node = Node.new params_node
+    @node.created_by = current_user
 
     respond_to do |format|
       if @node.save
@@ -20,7 +21,7 @@ class NodesController < ApplicationController
   end
 
   def show
-    @node = Node.find params[:id]
+    @node = current_user.nodes.find params[:id]
   end
 
   private

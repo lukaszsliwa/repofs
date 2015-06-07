@@ -1,0 +1,2 @@
+module Nodes::HooksHelper
+end

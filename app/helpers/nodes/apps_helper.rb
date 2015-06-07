@@ -1,0 +1,2 @@
+module Nodes::AppsHelper
+end

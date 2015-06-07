@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150606110212) do
+ActiveRecord::Schema.define(version: 20150607114908) do
 
   create_table "newsletters", force: :cascade do |t|
     t.string   "email"
@@ -28,12 +28,22 @@ ActiveRecord::Schema.define(version: 20150606110212) do
     t.string   "name"
     t.string   "ip"
     t.string   "domain"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "created_by_id"
   end
 
   add_index "nodes", ["domain"], name: "index_nodes_on_domain", unique: true
   add_index "nodes", ["ip"], name: "index_nodes_on_ip"
+
+  create_table "user_nodes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "node_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_nodes", ["user_id", "node_id"], name: "index_user_nodes_on_user_id_and_node_id", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",             default: "", null: false

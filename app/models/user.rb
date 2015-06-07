@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :first_name, :last_name, presence: true
+
+  has_many :user_nodes, dependent: :destroy
+  has_many :nodes, through: :user_nodes
 end

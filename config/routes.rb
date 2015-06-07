@@ -9,7 +9,15 @@ Rails.application.routes.draw do
   resource :newsletter, only: [:create, :destroy]
   resource :dashboard, only: :show
 
-  resources :nodes
+  resources :nodes do
+    resources :apps, controller: 'nodes/apps'
+    resources :domains, controller: 'nodes/domains'
+    resources :developers, controller: 'nodes/developers'
+    resources :hooks, controller: 'nodes/hooks'
+    resources :keys, controller: 'nodes/keys'
+    resources :repositories, controller: 'nodes/repositories'
+    resources :spaces, controller: 'nodes/spaces'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

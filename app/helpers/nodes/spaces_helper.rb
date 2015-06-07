@@ -1,0 +1,2 @@
+module Nodes::SpacesHelper
+end

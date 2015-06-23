@@ -2,3 +2,13 @@
   #{@node.name} &middot; Developers
 
 = render partial: 'nodes/shared/menu'
+
+.container
+  .row
+    .developers-wrapper
+      .col-xs-3
+        .developer-form
+          = render partial: 'nodes/developers/new', locals: { developer: Api::Client::Developer.new }
+      .developers
+        = render partial: 'nodes/developers/developer', collection: @developers
+

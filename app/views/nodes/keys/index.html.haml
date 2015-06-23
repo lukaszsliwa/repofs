@@ -2,3 +2,13 @@
   #{@node.name} &middot; Keys
 
 = render partial: 'nodes/shared/menu'
+
+
+.container
+  .row
+    .keys-wrapper
+      .col-xs-3
+        .key-form
+          = render partial: 'nodes/keys/new', locals: { key: Api::Client::Key.new }
+      .keys
+        = render partial: 'nodes/keys/key', collection: @keys

@@ -1,0 +1,5 @@
+- if @developer.errors.present?
+  $('#new_developer').replaceWith("#{escape_javascript(render partial: 'nodes/developers/new', locals: {developer: @developer})}");
+- else
+  $('.developers').prepend("#{escape_javascript(render partial: 'nodes/developers/developer', object: @developer)}");
+  $('#new_developer').replaceWith("#{escape_javascript(render partial: 'nodes/developers/new', locals: {developer: Api::Client::Developer.new})}");

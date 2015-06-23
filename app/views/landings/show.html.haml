@@ -84,7 +84,7 @@
           %li N/A pages
           %li N/A custom domains
           %li 5GB storage
-        %h4 $10/month
+        %h4 $20/month
     .col-sm-3
       .well
         %h3 Small
@@ -95,7 +95,7 @@
           %li N/A pages
           %li N/A custom domains
           %li 10GB storage
-        %h4 $20/month
+        %h4 $30/month
     .col-sm-3
       .spot
         Best
@@ -110,7 +110,7 @@
           %li Unlimited pages
           %li Unlimited custom domains
           %li 20GB storage
-        %h4 $30/month
+        %h4 $40/month
     .col-sm-3
       .well
         %h3 Large
@@ -127,7 +127,7 @@
       %small Additional storage costs $2/1GB/month
   .row
     .col-xs-12.center.graded
-      = link_to 'Sign up now', new_user_registration_path, class: 'signup'
+      = link_to 'Sign up for beta', new_user_registration_path, class: 'signup'
   %h2 Upgrades and maintenance
   .row
     .col-xs-12
@@ -157,4 +157,5 @@
             %span.input-group-addon
               %i.glyphicon.glyphicon-envelope
             = f.email_field :email, class: 'form-control', id: 'inputEmail', placeholder: 'E-mail address'
+          .errors
         = f.submit 'Sign up', class: 'signup small'

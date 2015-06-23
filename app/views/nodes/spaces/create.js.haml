@@ -1,0 +1,5 @@
+- if @space.errors.present?
+  $('#new_space').replaceWith("#{escape_javascript(render partial: 'nodes/spaces/new', locals: {space: @space})}");
+- else
+  $('.spaces').prepend("#{escape_javascript(render partial: 'nodes/spaces/space', object: @space)}");
+  $('#new_space').replaceWith("#{escape_javascript(render partial: 'nodes/spaces/new', locals: {space: Api::Client::Space.new})}");

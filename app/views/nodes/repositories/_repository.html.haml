@@ -1,0 +1,17 @@
+.col-xs-3(id="repository-#{repository.handle_with_space.parameterize}")
+  .repository
+    .panel-header
+      %i.fa.fa-git-square
+      = repository.handle_with_space
+    .panel-body
+      .row
+        .col-xs-6
+          %h4 Developers
+          %b= repository.users_count
+        .clearfix
+    .panel-footer
+      .pull-left
+        = repository.path
+      .pull-right
+        = link_to 'Delete', node_repository_path(@node, repository.handle, space_handle: repository.space_handle, format: :js), class: 'btn btn-sm btn-default', method: :delete, data: { confirm: "Do you really want to remove #{repository.handle_with_space}?" }, remote: true
+      .clearfix

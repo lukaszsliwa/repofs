@@ -1,3 +1,18 @@
-// Place all the styles related to the nodes/keys controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "../mixins";
+
+div.keys {
+  @extend .panels;
+
+  div.key {
+    @include panel(70px);
+  }
+}
+
+
+div.key-form {
+  @include panel(90px);
+  .panel-body {
+    height: 100px;
+    overflow-y: scroll;
+  }
+}

@@ -3,35 +3,41 @@
 
 .container
   .row
-    = link_to new_node_path, class: 'btn btn-success btn-round btn-grad' do
-      %i.fa.fa-plus
-      Create New Node
+    .jumbotron
+      This page is under construction.
 
-    .nodes
-      - @nodes.each do |node|
-        .col-lg-4
-          .node
-            .panel-header
-              %i.fa.fa-cube
-              = node.name
-            .panel-body
-              .row
-                .col-xs-4
-                  %h5 Usage
-                  %b 2GB
-                .col-xs-4
-                  %h5 Disk Space
-                  %b 10GB
-                .col-xs-4.text-center
-                  %h5 Status
-                  %span.badge.badge-success &nbsp;
-            .panel-footer
-              .pull-left
-                = node.ip || 'No IP attached'
-                &nbsp;&middot;&nbsp;
-                = node.domain
-              .pull-right
-                = link_to 'Show', node_path(node), class: 'btn btn-sm btn-default'
-              .clearfix
-    .clearfix
-    = paginate @nodes
+-#
+  .container
+    .row
+      = link_to new_node_path, class: 'btn btn-success btn-round btn-grad' do
+        %i.fa.fa-plus
+        Create New Node
+
+      .nodes
+        - @nodes.each do |node|
+          .col-lg-4
+            .node
+              .panel-header
+                %i.fa.fa-cube
+                = node.name
+              .panel-body
+                .row
+                  .col-xs-4
+                    %h5 Usage
+                    %b 2GB
+                  .col-xs-4
+                    %h5 Disk Space
+                    %b 10GB
+                  .col-xs-4.text-center
+                    %h5 Status
+                    %span.badge.badge-success &nbsp;
+              .panel-footer
+                .pull-left
+                  = node.ip || 'No IP attached'
+                  &nbsp;&middot;&nbsp;
+                  = node.domain
+                .pull-right
+                  = link_to 'Show', node_path(node), class: 'btn btn-sm btn-default'
+                .clearfix
+      .clearfix
+      = paginate @nodes

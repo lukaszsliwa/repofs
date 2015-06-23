@@ -1,3 +1,17 @@
-// Place all the styles related to the nodes/repositories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "../mixins";
+
+div.repositories {
+  @extend .panels;
+
+  div.repository {
+    @include panel(90px);
+  }
+}
+
+div.repository-form {
+  @include panel(90px);
+  .panel-body {
+    height: 120px;
+    overflow-y: scroll;
+  }
+}

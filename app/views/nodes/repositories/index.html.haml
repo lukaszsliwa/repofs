@@ -2,3 +2,13 @@
   #{@node.name} &middot; Repositories
 
 = render partial: 'nodes/shared/menu'
+
+.container
+  .row
+    .repositories-wrapper
+      .col-xs-3
+        .repository-form
+          = render partial: 'nodes/repositories/new', locals: { repository: Api::Client::Repository.new }
+      .repositories
+        = render partial: 'nodes/repositories/repository', collection: @repositories
+

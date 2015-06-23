@@ -1,0 +1,5 @@
+- if @key.errors.present?
+  $('#new_key').replaceWith("#{escape_javascript(render partial: 'nodes/keys/new', locals: {key: @key})}");
+- else
+  $('.keys').prepend("#{escape_javascript(render partial: 'nodes/keys/key', object: @key)}");
+  $('#new_key').replaceWith("#{escape_javascript(render partial: 'nodes/keys/new', locals: {key: Api::Client::Key.new})}");

@@ -2,3 +2,13 @@
   #{@node.name} &middot; Work spaces
 
 = render partial: 'nodes/shared/menu'
+
+.container
+  .row
+    .spaces-wrapper
+      .col-xs-3
+        .space-form
+          = render partial: 'nodes/spaces/new', locals: { space: Api::Client::Space.new }
+      .spaces
+        = render partial: 'nodes/spaces/space', collection: @spaces
+

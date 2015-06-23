@@ -2,6 +2,8 @@ class Node < ActiveRecord::Base
   before_validation :prepare_domain
   after_commit :associate_creator_with_node
 
+  attr_accessor :subdomain
+
   validates :subdomain, presence: true
   validates :domain, uniqueness: true
 
@@ -12,6 +14,14 @@ class Node < ActiveRecord::Base
 
   def prepare_domain
     self.domain = Settings.node.domain % {subdomain: subdomain}
+  end
+
+  def api_version
+    'v1'
+  end
+
+  def api_url
+    "http://#{domain}/"
   end
 
   private

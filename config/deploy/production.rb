@@ -1,3 +1,3 @@
 set :rails_env, 'production'
 
-server 'repofs.com', user: 'www', roles: %w{app db web}
+server '92.222.92.4', user: 'www', roles: %w{app db web}

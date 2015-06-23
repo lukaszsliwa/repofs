@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 
+gem 'puma', '~> 2.11.2'
+
 gem 'devise', '~> 3.5.1'
 gem 'kaminari'
 

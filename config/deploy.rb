@@ -3,8 +3,8 @@ lock '3.4.0'
 set :application, 'repofs'
 set :repo_url, 'lukasz@git.apptamers.com:repofs/app.git'
 set :deploy_to, '/var/www/repofs/app'
-set :linked_files, %w(config/application.yml config/database.yml config/secrets.yml config/puma.conf)
-set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets tmp/pids vendor/bundle public/system)
+set :linked_files, %w(config/application.yml config/database.yml config/secrets.yml config/puma.conf db/production.sqlite3)
+set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets tmp/pids vendor/bundle public/system )
 
 namespace :deploy do
   namespace :puma do
